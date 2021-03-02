@@ -2,6 +2,7 @@
 
 ## 1.1.9 / 2020-03-02
 
+- Updated chromedriver for test
 - Updated pipeline to use internal agent pool
 - Updated pipeline to reference main branch
 
