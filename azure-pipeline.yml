@@ -45,13 +45,13 @@ jobs:
           fileLibrary: $(CredFileLibrary)
           filePath: src
 
-      - bash: npm ci
+      - script: npm ci
         displayName: 'Install dependencies'
 
-      - bash: npm start &
+      - script: npm start &
         displayName: 'Run app'
 
-      - bash: npm test
+      - script: npm test
         displayName: 'Run tests'
 
       - task: PublishTestResults@2
