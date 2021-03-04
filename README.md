@@ -1,10 +1,10 @@
 # Authorization Code Flow + PKCE JavaScript Sample and Test
 
-**Version:** 1.1.8
+**Version:** 1.1.9
 
-[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/OCS/osisoft.sample-ocs-authentication_authorization-javascript?repoName=osisoft%2Fsample-ocs-authentication_authorization-javascript&branchName=master)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2605&repoName=osisoft%2Fsample-ocs-authentication_authorization-javascript&branchName=master)
+[![Build Status](https://dev.azure.com/osieng/engineering/_apis/build/status/product-readiness/OCS/osisoft.sample-ocs-authentication_authorization-javascript?repoName=osisoft%2Fsample-ocs-authentication_authorization-javascript&branchName=main)](https://dev.azure.com/osieng/engineering/_build/latest?definitionId=2605&repoName=osisoft%2Fsample-ocs-authentication_authorization-javascript&branchName=main)
 
-This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main OCS Authentication samples page [README](https://github.com/osisoft/OSI-Samples-OCS/blob/master/docs/AUTHENTICATION_README.md) for more information about this flow.
+This client uses the OAuth2/OIDC Authorization Code Flow + PKCE to obtain an access token. See the main OCS Authentication samples page [README](https://github.com/osisoft/OSI-Samples-OCS/blob/main/docs/AUTHENTICATION_README.md) for more information about this flow.
 
 ## Requirements
 
@@ -62,6 +62,6 @@ npm test
 
 ---
 
-For the main OCS Authentication samples page on master [ReadMe](https://github.com/osisoft/OSI-Samples-OCS/blob/master/docs/AUTHENTICATION_README.md)  
-For the main OCS samples page on master [ReadMe](https://github.com/osisoft/OSI-Samples-OCS)  
-For the main OSIsoft samples page on master [ReadMe](https://github.com/osisoft/OSI-Samples)
+For the main OCS Authentication samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS/blob/main/docs/AUTHENTICATION_README.md)  
+For the main OCS samples page [ReadMe](https://github.com/osisoft/OSI-Samples-OCS)  
+For the main OSIsoft samples page [ReadMe](https://github.com/osisoft/OSI-Samples)

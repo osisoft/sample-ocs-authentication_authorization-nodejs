@@ -1,0 +1,67 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+schedules:
+  - cron: '0 0 * * 0'
+    displayName: Weekly build
+    branches:
+      include:
+        - main
+    always: true
+
+resources:
+  repositories:
+    - repository: templates
+      type: github
+      name: osisoft/OSI-Samples
+      endpoint: osisoft/OSI-Samples
+
+variables:
+  - template: '/miscellaneous/build_templates/variables.yml@templates'
+  - name: CredFile
+    value: config.js
+  - name: CredFileLibrary
+    value: product-readiness.auth_pkce_javascript.js
+  - name: analysisProject
+    value: Auth_PKCE_JavaScript
+
+jobs:
+  - job: Tests
+    pool:
+      name: 00-OSIManaged-Containers
+      demands: Agent.OS -equals Windows_NT
+    steps:
+      - template: '/miscellaneous/build_templates/config.yml@templates'
+        parameters:
+          fileOriginal: $(CredFile)
+          fileLibrary: $(CredFileLibrary)
+          filePath: src
+
+      - script: npm ci
+        displayName: 'Install dependencies'
+
+      - script: start /B npm start
+        displayName: 'Run app'
+
+      - script: npm test
+        displayName: 'Run tests'
+
+      - task: PublishTestResults@2
+        inputs:
+          testResultsFormat: JUnit
+          testResultsFiles: '*.xml'
+          failTaskOnFailedTests: true
+          searchFolder: '$(Build.SourcesDirectory)/TestResults'
+          testRunTitle: '$(Agent.JobName) on $(Agent.OS)'
+        displayName: 'Publish test results'
+        condition: always()
+
+      - template: '/miscellaneous/build_templates/analysis.yml@templates'
