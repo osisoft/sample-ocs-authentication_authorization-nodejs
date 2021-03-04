@@ -43,7 +43,7 @@ jobs:
         parameters:
           fileOriginal: $(CredFile)
           fileLibrary: $(CredFileLibrary)
-          filePath: src
+          filePath: \src
 
       - script: npm ci
         displayName: 'Install dependencies'
