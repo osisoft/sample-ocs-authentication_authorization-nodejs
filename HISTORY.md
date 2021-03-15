@@ -1,5 +1,9 @@
 # Version History
 
+## 1.1.10 / 2020-03-15
+
+- Updated pipeline to auto-detect Chrome version
+
 ## 1.1.9 / 2020-03-02
 
 - Updated chromedriver for test
