@@ -62,7 +62,7 @@ describe('Sample App', () => {
     // Enter password, and click Next
     await driver.wait(until.urlContains('username='), wait);
     await driver
-      .findElement(By.id('i0118'))
+      .wait(until.elementLocated(By.id('i0118')), wait)
       .then((e) => e.sendKeys(config.password));
     await driver
       .wait(until.elementLocated(By.id('idSIButton9')), wait)
