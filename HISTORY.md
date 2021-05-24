@@ -1,5 +1,9 @@
 # Version History
 
+## 1.1.11 / 2021-05-24
+
+- Updated dependencies
+
 ## 1.1.10 / 2020-03-15
 
 - Updated pipeline to auto-detect Chrome version
